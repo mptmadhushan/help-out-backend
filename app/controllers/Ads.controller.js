@@ -3,15 +3,13 @@ const Ads = db.ads;
 const upload = require("../middleware/uploadArray");
 
 exports.createAdd = async (req, res) => {
-  await upload(req, res);
-
-  if (req.files == undefined) {
-    return res.status(400).send({ message: "Please upload a file!" });
-  }
   const photo = {
-    image1: req.files.image1[0].filename,
-    para1: req.body.para1,
-    title: req.body.title,
+    message: req.body.message,
+    listId: req.body.listId,
+    userId: req.body.userId,
+    isBlur: req.body.isBlur,
+    listName: req.body.listName,
+    userName: req.body.userName,
   };
 
   // Save Tutorial in the database

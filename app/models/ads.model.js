@@ -1,15 +1,23 @@
-const moment= require('moment') 
+const moment = require("moment");
 module.exports = (sequelize, DataTypes) => {
   const Ads = sequelize.define("Ads", {
-    title: {
+    message: {
       type: DataTypes.STRING,
     },
-    para1: {
+    listId: {
       type: DataTypes.STRING,
     },
-
-    image1: {
+    listName: {
       type: DataTypes.STRING,
+    },
+    userId: {
+      type: DataTypes.STRING,
+    },
+    userName: {
+      type: DataTypes.STRING,
+    },
+    isBlur: {
+      type: DataTypes.BOOLEAN,
     },
     createdAt: {
       type: DataTypes.DATE,
