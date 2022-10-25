@@ -256,7 +256,7 @@ exports.updateTrend = (req, res) => {
   const id = req.body.id;
 
   Posts.update(
-    { trend: req.body.trend + 1 },
+    { isBlur: false},
     {
       where: { id: id },
     }
